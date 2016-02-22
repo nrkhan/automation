@@ -3,10 +3,10 @@
 # Suite for acceptance tests.
 # Perform tests in browser using the WebDriver or PhpBrowser.
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
 class_name: AcceptanceTester
 modules:
     enabled:
-       - PhpBrowser:
-           url: '172.16.3.15:9090/mids/auth'
-           curl:
-               CURLOPT_TIMEOUT: 50
+        - PhpBrowser:
+            url: http://172.16.4.238
+        - \Helper\Acceptance
