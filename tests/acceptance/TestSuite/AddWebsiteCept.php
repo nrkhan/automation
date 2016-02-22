@@ -11,7 +11,7 @@ $I->click('Websites');
 $I->seeInCurrentUrl('/websites');
 $I->click(['class' => 'btn-primary']);
 $I->see('Basic Details');
-$I->selectOption('id_domain','68');   //Need to change Value every time before run
+$I->selectOption('id_domain','94');   //Need to change Value every time before run
 $I->selectOption('id_template', '2');
 $I->fillField('campaign_id','595');
 $I->fillField('campaign_link','http://www.equinoxdna.com/o23new/direct_billing.php');
