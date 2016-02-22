@@ -1,6 +1,6 @@
 <?php 
 $I = new AcceptanceTester($scenario);
-$i=rand(1,100);
+$i=rand(50,100);
 $I->wantTo('Add Pages');
 $I->amOnPage('/login');
 $I->fillField('email','dbhayani@eplanetcom.com');
