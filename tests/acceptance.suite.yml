@@ -7,6 +7,6 @@ class_name: AcceptanceTester
 modules:
     enabled:
        - PhpBrowser:
-           url: '172.16.3.15:9090/mids/auth'
+           url: 'http://172.16.3.15:9090/mids/auth'
            curl:
                CURLOPT_TIMEOUT: 50
