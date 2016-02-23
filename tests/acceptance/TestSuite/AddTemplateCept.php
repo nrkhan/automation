@@ -12,7 +12,7 @@ $I->see('TEMPLATE');
 $I->click(['class' => 'btn-primary']);
 $I->see('Template');
 $I->fillField('name','QA Temp'.$i.'');
-$I->attachFile('input[type="file"]', 'rvtlreduceactive.zip');
+$I->attachFile('input[type="file"]', 'fit-rasp-template.zip');
 $I->click(['class' => 'btn-primary']);
 $I->see('Template added successfully');
 $I->click('Logout');
