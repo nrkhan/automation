@@ -1,0 +1,47 @@
+<?php 
+$i=rand(1,100);
+$I = new AcceptanceTester($scenario);
+$I->wantTo('Add Prices in Mids Management');
+$I->amOnPage('/login');
+	$I->fillField('email','mbilal@eplanetcom.com');
+	$I->fillField("password","123456");
+$I->click(['class' => 'btn-raised']);
+$I->seeLink('Logout', '/logout');
+$I->click('Prices');
+$I->see('Prices Management');
+$I->click(['class' => 'btn-primary']);
+$I->see('Prices Management - Add New');
+	$I->fillField('title', 'QA test'.$i.'');
+$I->checkOption(['class' => 'show-hide-details', 'name' => 'is_us']);
+	$I->fillField('us_currency_symbol','Symbol'.$i.'');
+	$I->fillField('us_regular_price','Price'.$i.'');
+	$I->fillField('us_exclusive_price','EPrice'.$i.'');
+	$I->fillField('us_actual_amount','APrice'.$i.'');
+	$I->fillField('us_ship_amount','Price'.$i.'');
+	$I->fillField('us_total_amount','Price'.$i.'');
+	$I->fillField('us_rebill_price','Price'.$i.'');
+	$I->fillField('us_rebill_shipping','Shipping'.$i.'');
+$I->checkOption(['class' => 'show-hide-details', 'name' => 'is_uk']);
+	$I->fillField('uk_currency_symbol','Symbol'.$i.'');
+	$I->fillField('uk_regular_price','Price'.$i.'');
+	$I->fillField('uk_exclusive_price','Price'.$i.'');
+	$I->fillField('uk_actual_amount','Price'.$i.'');
+	$I->fillField('uk_ship_amount','Price'.$i.'');
+	$I->fillField('uk_total_amount','Price'.$i.'');
+	$I->fillField('uk_rebill_price','Price'.$i.'');
+	$I->fillField('uk_rebill_shipping','Shipping'.$i.'');
+$I->checkOption(['class' => 'show-hide-details', 'name' => 'is_tur']);
+	$I->fillField('tur_currency_symbol','Symbol'.$i.'');
+	$I->fillField('tur_regular_price','Price'.$i.'');
+	$I->fillField('tur_exclusive_price','Price'.$i.'');
+	$I->fillField('tur_actual_amount','Price'.$i.'');
+	$I->fillField('tur_ship_amount','Price'.$i.'');
+	$I->fillField('tur_total_amount','Price'.$i.'');
+	$I->fillField('tur_rebill_price','Price'.$i.'');
+	$I->fillField('tur_rebill_shipping','Shipping'.$i.'');
+$I->click(['class' => 'btn-primary']);  
+$I->see('Prices added successfully');
+$I->click('Logout');
+$I->see('Login');
+?>
+
